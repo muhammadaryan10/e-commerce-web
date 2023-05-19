@@ -1,0 +1,19 @@
+.card-header {
+    background-color:#ef9273;
+    color: white;
+    text-align: center;
+  }
+  
+  .card {
+    margin-top: 50px;
+  }
+  
+  .btn-primary {
+    background-color:#ef9273;
+    border-color: #ef9273;
+  }
+  
+  .btn-primary:hover {
+    background-color:#ef9273;
+    border-color: #ef9273;
+  }

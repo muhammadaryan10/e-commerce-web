@@ -13,8 +13,26 @@ loadmorebtn.addEventListener("click", () => {
   }
 });
 
+
+
+function checkin(){
+  var loginbtn = document.getElementById("loginbtn");
+  if(loginbtn.innerHTML=="login"){
+    window.location.href="login.html"
+    loginbtn.innerHTML="logout"
+  }
+  else{
+    var logout=localStorage.setItem("user","logout")
+    alert("logout succes ful")
+    loginbtn.innerHTML="login";
+  }
+}
+
+
 function signup() {
   localStorage.clear();
+  alert("you are succesfully Register")
+
   var username = document.getElementById("username").value;
   var email = document.getElementById("email").value;
   var pass = document.getElementById("password").value;
@@ -22,6 +40,7 @@ function signup() {
   localStorage.setItem("username", username);
   localStorage.setItem("email", email);
   localStorage.setItem("pass", pass);
+  window.location.href="e.html"
 }
 
 function login() {
@@ -40,13 +59,13 @@ function login() {
     alert("Plz enter correct id and password or signup");
   }
 }
-function logout() {
-  alert("logout succes ful")
-  var logout=localStorage.setItem("user","logout")
-  if (user==login){
-    window.location.href="home.html"
-  }
-  else {
-    alert ( 'plz  login first' )
-  }
-}
+// function logout() {
+//   alert("logout succes ful")
+//   var logout=localStorage.setItem("user","logout")
+//   if (user==login){
+//     window.location.href="home.html"
+//   }
+//   else {
+//     alert ( 'plz  login first' )
+//   }
+// }
